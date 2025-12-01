@@ -5,6 +5,8 @@ This project reproduces the M2 range query selectivity experiments (Table 5) fro
 **A Generic Machine Learning Model for Spatial Query Optimization based on Spatial Embeddings**  
 Belussi et al., 2024.
 
+Link to this paper's source code: https://github.com/smigliorini/spatial-embedding
+
 We evaluate both:
 
 1. The authors’ pretrained M2 models
