@@ -1,0 +1,13 @@
+{
+  "dataset_path": "tset/emb0_bal_synt",
+  "model_type": "cnn",
+  "hyperparameters": {
+    "f1": 512,
+    "f2": 256,
+    "f3": 256,
+    "f4": 128
+  },
+  "batch_size": 8,
+  "epochs": 80,
+  "patience": 6
+}

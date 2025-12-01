@@ -205,3 +205,9 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# datasets and models
+tset/*
+!tset/README.md
+pretrained/*
+!pretrained/README.md

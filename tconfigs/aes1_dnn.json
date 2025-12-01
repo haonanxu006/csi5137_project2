@@ -1,0 +1,7 @@
+{
+  "x": "tset/emb1_bal_synt/x.npy",
+  "x1": "tset/emb1_bal_synt/x1.npy",
+  "y": "tset/emb1_bal_synt/y.npy",
+  "y_ds": "tset/emb1_bal_synt/y_ds.npy",
+  "m": "pretrained/RQ_DNN_AES1"
+}

@@ -1,0 +1,14 @@
+{
+  "dataset_path": "tset/emb2_real_bal_real",
+  "model_type": "dnn",
+  "hyperparameters": {
+    "f1": 128,
+    "f2": 64,
+    "f3": 64,
+    "f4": 32,
+    "f5": 32
+  },
+  "batch_size": 8,
+  "epochs": 80,
+  "patience": 6
+}

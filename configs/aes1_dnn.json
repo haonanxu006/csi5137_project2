@@ -1,0 +1,14 @@
+{
+  "dataset_path": "tset/emb1_bal_synt",
+  "model_type": "dnn",
+  "hyperparameters": {
+    "f1": 256,
+    "f2": 128,
+    "f3": 128,
+    "f4": 64,
+    "f5": 64
+  },
+  "batch_size": 8,
+  "epochs": 80,
+  "patience": 6
+}

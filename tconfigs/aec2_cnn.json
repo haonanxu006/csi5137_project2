@@ -1,0 +1,7 @@
+{
+  "x": "tset/emb0_bal_synt/x.npy",
+  "x1": "tset/emb0_bal_synt/x1.npy",
+  "y": "tset/emb0_bal_synt/y.npy",
+  "y_ds": "tset/emb0_bal_synt/y_ds.npy",
+  "m": "pretrained/RQ_CNN_AEC2"
+}
