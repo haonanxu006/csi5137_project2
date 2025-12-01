@@ -30,11 +30,11 @@ test_pretrained.py # Script for testing pretrained models
 
 ### 1. Test pretrained models
 
-python test_pretrained.py --cfg tconfigs/aes1_dnn.json
+`python test_pretrained.py --cfg tconfigs/aes1_dnn.json`
 
 ### 2. Train a model
 
-python train.py --cfg configs/aec2_cnn.json
+`python train.py --cfg configs/aec2_cnn.json`
 
 Datasets and pretrained models must be downloaded and renamed before any testing or training (links provided in folder READMEs).
 
