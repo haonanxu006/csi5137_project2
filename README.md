@@ -18,6 +18,7 @@ We evaluate both:
 - tconfigs/ # Configs for testing pretrained models
 - pretrained/ # Authors’ pretrained models (download; see README inside)
 - tset/ # Training datasets for M2 (download; see README inside)
+- eval_output/ # Raw evaluation outputs for all reproduction experiments
 
 - myModel_RQ.py # M2 model definitions (DNN & CNN) adapted from authors' code
 - run_model_all.py# Evaluation helpers extracted from authors' code

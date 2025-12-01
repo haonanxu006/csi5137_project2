@@ -1,0 +1,123 @@
+2025-11-30 13:46:45.663640: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-11-30 13:46:46.840288: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-11-30 13:46:51.457288: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Loading dataset...
+Building M2-CNN...
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1764528449.021501   63212 gpu_device.cc:2020] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 1756 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3050 Ti Laptop GPU, pci bus id: 0000:01:00.0, compute capability: 8.6
+2025-11-30 13:47:31.092053: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:473] Loaded cuDNN version 91600
+Model: "rq_sel_2_input_cnn2l_cnn1l_dense2l"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
+┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
+│ conv2d (Conv2D)                      │ (1, 1, 1, 512)              │           9,728 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_1 (Conv2D)                    │ (1, 1, 1, 256)              │       1,179,904 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ conv2d_2 (Conv2D)                    │ (1, 16, 16, 512)            │          14,336 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense (Dense)                        │ (1, 256)                    │      33,620,224 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_1 (Dense)                      │ (1, 128)                    │          32,896 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dense_2 (Dense)                      │ (1, 1)                      │             129 │
+├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
+│ dropout (Dropout)                    │ ?                           │               0 │
+└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
+ Total params: 34,857,217 (132.97 MB)
+ Trainable params: 34,857,217 (132.97 MB)
+ Non-trainable params: 0 (0.00 B)
+Epoch 1/80
+2025-11-30 13:47:35.860705: I external/local_xla/xla/service/service.cc:163] XLA service 0x7f2fec00b7d0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2025-11-30 13:47:35.860791: I external/local_xla/xla/service/service.cc:171]   StreamExecutor device (0): NVIDIA GeForce RTX 3050 Ti Laptop GPU, Compute Capability 8.6
+2025-11-30 13:47:35.985508: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2025-11-30 13:47:37.317775: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_339', 16 bytes spill stores, 16 bytes spill loads
+
+2025-11-30 13:47:37.481454: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_339', 8 bytes spill stores, 8 bytes spill loads
+
+I0000 00:00:1764528460.960115   63296 device_compiler.h:196] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+5098/5099 ━━━━━━━━━━━━━━━━━━━━ 0s 17ms/step - loss: 1.21052025-11-30 13:49:08.813604: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_339', 8 bytes spill stores, 8 bytes spill loads
+
+2025-11-30 13:49:09.111190: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_339', 16 bytes spill stores, 16 bytes spill loads
+
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 0s 18ms/step - loss: 1.21032025-11-30 13:49:19.947985: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 16 bytes spill stores, 16 bytes spill loads
+
+2025-11-30 13:49:20.104404: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_58', 8 bytes spill stores, 8 bytes spill loads
+
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 108s 20ms/step - loss: 0.1699 - val_loss: 0.0156
+Epoch 2/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 93s 18ms/step - loss: 0.0127 - val_loss: 0.0117
+Epoch 3/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 94s 18ms/step - loss: 0.0098 - val_loss: 0.0060
+Epoch 4/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 94s 18ms/step - loss: 0.0064 - val_loss: 0.0056
+Epoch 5/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 92s 18ms/step - loss: 0.0049 - val_loss: 0.0058
+Epoch 6/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 95s 19ms/step - loss: 0.0042 - val_loss: 0.0037
+Epoch 7/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 253s 50ms/step - loss: 0.0035 - val_loss: 0.0031
+Epoch 8/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 460s 90ms/step - loss: 0.0031 - val_loss: 0.0030
+Epoch 9/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 461s 90ms/step - loss: 0.0029 - val_loss: 0.0028
+Epoch 10/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 455s 89ms/step - loss: 0.0028 - val_loss: 0.0036
+Epoch 11/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 457s 90ms/step - loss: 0.0026 - val_loss: 0.0019
+Epoch 12/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 459s 90ms/step - loss: 0.0025 - val_loss: 0.0019
+Epoch 13/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 241s 39ms/step - loss: 0.0024 - val_loss: 0.0022
+Epoch 14/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 92s 18ms/step - loss: 0.0023 - val_loss: 0.0021
+Epoch 15/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 91s 18ms/step - loss: 0.0023 - val_loss: 0.0018
+Epoch 16/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 92s 18ms/step - loss: 0.0021 - val_loss: 0.0016
+Epoch 17/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 93s 18ms/step - loss: 0.0020 - val_loss: 0.0024
+Epoch 18/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 92s 18ms/step - loss: 0.0019 - val_loss: 0.0018
+Epoch 19/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 315s 62ms/step - loss: 0.0019 - val_loss: 0.0020
+Epoch 20/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 461s 90ms/step - loss: 0.0018 - val_loss: 0.0026
+Epoch 21/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 460s 90ms/step - loss: 0.0019 - val_loss: 0.0014
+Epoch 22/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 340s 67ms/step - loss: 0.0017 - val_loss: 0.0021
+Epoch 23/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 94s 19ms/step - loss: 0.0017 - val_loss: 0.0016
+Epoch 24/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 96s 19ms/step - loss: 0.0017 - val_loss: 0.0030
+Epoch 25/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 98s 19ms/step - loss: 0.0016 - val_loss: 0.0014
+Epoch 26/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 98s 19ms/step - loss: 0.0015 - val_loss: 0.0014
+Epoch 27/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 218s 43ms/step - loss: 0.0017 - val_loss: 0.0012
+Epoch 28/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 456s 89ms/step - loss: 0.0015 - val_loss: 0.0016
+Epoch 29/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 455s 89ms/step - loss: 0.0016 - val_loss: 0.0032
+Epoch 30/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 456s 89ms/step - loss: 0.0015 - val_loss: 0.0012
+Epoch 31/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 457s 90ms/step - loss: 0.0014 - val_loss: 0.0014
+Epoch 32/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 461s 90ms/step - loss: 0.0016 - val_loss: 0.0026
+Epoch 33/80
+5099/5099 ━━━━━━━━━━━━━━━━━━━━ 460s 90ms/step - loss: 0.0015 - val_loss: 0.0017
+2025-11-30 16:13:25.813889: I external/local_xla/xla/service/gpu/autotuning/dot_search_space.cc:208] All configs were filtered out because none of them sufficiently match the hints. Maybe the hints set does not contain a good representative set of valid configs? Working around this by using the full hints set instead.
+2025-11-30 16:13:25.724468: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_52', 8 bytes spill stores, 8 bytes spill loads
+
+395/399 ━━━━━━━━━━━━━━━━━━━━ 0s 16ms/step2025-11-30 16:13:35.845032: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_52', 16 bytes spill stores, 16 bytes spill loads
+
+2025-11-30 16:13:35.897849: I external/local_xla/xla/stream_executor/cuda/subprocess_compilation.cc:346] ptxas warning : Registers are spilled to local memory in function 'gemm_fusion_dot_52', 8 bytes spill stores, 8 bytes spill loads
+
+399/399 ━━━━━━━━━━━━━━━━━━━━ 12s 22ms/step
+
+=== Evaluation ===
+WMAPE : 0.060004126880311516
