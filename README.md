@@ -14,15 +14,15 @@ We evaluate both:
 
 ## Project Structure
 
-configs/ # Configs for training our M2 models
-tconfigs/ # Configs for testing pretrained models
-pretrained/ # Authors’ pretrained models (download; see README inside)
-tset/ # Training datasets for M2 (download; see README inside)
+- configs/ # Configs for training our M2 models
+- tconfigs/ # Configs for testing pretrained models
+- pretrained/ # Authors’ pretrained models (download; see README inside)
+- tset/ # Training datasets for M2 (download; see README inside)
 
-myModel_RQ.py # M2 model definitions (DNN & CNN) adapted from authors' code
-run_model_all.py# Evaluation helpers extracted from authors' code
-train.py # Training pipeline
-test_pretrained.py # Script for testing pretrained models
+- myModel_RQ.py # M2 model definitions (DNN & CNN) adapted from authors' code
+- run_model_all.py# Evaluation helpers extracted from authors' code
+- train.py # Training pipeline
+- test_pretrained.py # Script for testing pretrained models
 
 ---
 
