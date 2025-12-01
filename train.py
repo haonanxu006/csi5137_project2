@@ -64,7 +64,6 @@ def train(config):
         x, x1, y, test_size=0.2, random_state=42
     )
 
-    # create validation set
     x_train, x_valid, x1_train, x1_valid, y_train, y_valid = train_test_split(
         x_train, x1_train, y_train, test_size=0.2, random_state=42
     )
